@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete car</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+        <strong>
+            Delete car
+        </strong>
+    </p>
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>Are you sure you want to delete car "{{ object }}"?</p>
+    <input type="submit" value="Confirm" class="inputbutton" style="color:#3ACA05;">
+    <a href="http://127.0.0.1:8000/car/list" class="inputbutton" style="color:#ca0505; font-size:20px;padding:2px 30px;">Decline</a>
+</form>
+</body>
+</html>

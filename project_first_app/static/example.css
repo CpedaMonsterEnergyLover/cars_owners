@@ -1,0 +1,47 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+.font {
+    font-family: Verdana,serif;
+    color: #e0dbdb;
+}
+button {
+    box-shadow: 3px 4px 2px -1px rgba(20, 20, 60, 10);
+    background: #181717;
+    border-radius:20px;
+    border-color: #1c1a1a;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Verdana;
+    font-size:11px;
+    padding:3px 40px;
+    text-decoration:none;
+    margin-left: 10px;
+}
+button:hover{
+    color: #1b4f5c;
+    background: #351d0f;
+}
+button:active {
+    position:relative;
+    top:1px;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-size: cover;
+    height: 100vh;
+}
+textarea{
+    background-color: #181717;
+    height:200px;
+    width: 100%;
+    border: 2px solid black;
+}
+input {
+    width:100px;
+    background-color: #181717
+}

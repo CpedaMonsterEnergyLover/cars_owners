@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owners</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+        <strong>
+            <span class = "chosenlist">List of all owners</span> -
+            <a href="http://127.0.0.1:8000/car/list">List of all cars</a>
+        </strong>
+    </p>
+    <p>
+        <a href="http://127.0.0.1:8000/owner/new">Add new owner</a>
+    </p>
+    <div class = "list">
+            {% for data in dataset %}
+            Имя: {{ data.first_name }}<br/>
+            Фамилия: {{ data.second_name }}<br/>
+            Дата рождения: {{ data.birth_date }}<br/>
+            Номер паспорта: {{ data.passport_number }}<br/>
+            Национальность: {{ data.nation }}<br/>
+            Домашний адрес: {{ data.home_address }}<br/>
+            <a href="http://127.0.0.1:8000/owner/{{ data.id }}">View</a><!-- /
+            <a href="http://127.0.0.1:8000/owner/{{ data.id }}/update">Edit</a>-->
+            <hr/>
+            {% endfor %}
+    </div>
+</body>
+</html>

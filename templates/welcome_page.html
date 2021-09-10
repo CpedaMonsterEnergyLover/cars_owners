@@ -1,0 +1,27 @@
+<html lang="en">
+<head>{% load static %}
+    <meta charset="UTF-8">
+    <title>
+       Welcome page
+    </title>
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+        <strong>
+        Hello world!
+        </strong>
+    </p>
+    Сайт для хранения машин и их владельцев. API стандартное для таблиц owner и car
+    <p>
+        owner/<int:id>/<br>
+        owner/list/<br>
+        owner/new/<br>
+        car/<int:pk>/<br>
+        car/list<br>
+        car/<int:pk>/update<br>
+        car/new/<br>
+        car/<int:pk>/delete<br>
+    </p>
+</body>
+</html>

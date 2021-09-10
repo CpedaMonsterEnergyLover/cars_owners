@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owners</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+    Имя: {{owner.first_name}},</br>
+    Фамилия: {{owner.second_name}}
+    </p>
+    <p>
+        <a href="http://127.0.0.1:8000/owner/list">Back to owners list</a>
+    </p>
+    <br>
+</body>
+</html>

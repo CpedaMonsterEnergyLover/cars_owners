@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+        <strong>
+            Add user
+        </strong>
+    </p>
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class="inputbutton">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+        <strong>
+            <a href="http://127.0.0.1:8000/owner/list">List of all owners</a> -
+            <span class = "chosenlist">List of all cars</span>
+        </strong>
+    </p>
+    <p>
+        <a href="http://127.0.0.1:8000/car/new">Add new car</a>
+    </p>
+    <div class = "list">
+            {% for object in object_list %}
+            <span class="car">Марка автомобиля: {{ object.brand }}<br/>
+              Модель: {{ object.model }}<br/>
+              Цвет: {{ object.color }}<br/>
+              Гос. номер: {{ object.number }}</span><br/>
+            <a href="http://127.0.0.1:8000/car/{{ object.id }}">View</a> /
+            <a href="http://127.0.0.1:8000/car/{{ object.id }}/update">Edit</a> /
+            <a href="http://127.0.0.1:8000/car/{{ object.id }}/delete">Delete</a>
+            <hr/>
+            {% endfor %}
+    </div>
+</body>
+</html>

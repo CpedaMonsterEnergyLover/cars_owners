@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages_style.css'%}">
+</head>
+<body>
+    <p>
+    Марка автомобиля: {{object.brand}},<br/>
+    Модель: {{object.model}},<br/>
+    Цвет: {{ object.color }},<br/>
+    Гос. номер: {{ object.number }}
+    </p>
+    <p>
+        <a href="http://127.0.0.1:8000/car/list">Back to cars list</a>
+    </p>
+    <br>
+</body>
+</html>
